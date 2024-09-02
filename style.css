@@ -1,90 +1,63 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul {
+body {
+     font-family: Arial, sans-serif;
      margin: 0;
      padding: 0;
-     list-style: none;
- }
- 
- body {
-     font-family: Arial, sans-serif;
  }
  
  .navbar {
+     background-color: #fff;
+     border-bottom: 1px solid #ddd;
      position: sticky;
      top: 0;
-     background-color: white;
-     color: blue;
      width: 100%;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     display: flex;
+     justify-content: space-around;
+     padding: 10px;
      z-index: 1000;
  }
  
- .navbar-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 10px 20px;
+ .nav-item {
+     margin: 0 15px;
  }
  
- .navbar-logo {
-     font-size: 24px;
-     font-weight: bold;
-     color: blue;
+ .nav-item a {
      text-decoration: none;
+     color: #000;
  }
  
- .navbar-menu {
-     display: flex;
-     gap: 20px;
- }
- 
- .navbar-menu a {
-     color: blue;
-     text-decoration: none;
-     font-weight: bold;
- }
- 
- .hero {
-     background-color: lightgray;
-     padding: 50px 20px;
+ .content {
+     padding: 20px;
      text-align: center;
  }
  
- .section {
-     padding: 20px;
+ .categories {
+     display: flex;
+     justify-content: center;
+     gap: 50px;
  }
  
- .product-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-     gap: 20px;
+ .category img {
+     width: 200px;
+     height: 300px;
+ }
+ 
+ .series {
      margin-top: 20px;
  }
  
- .product-card {
+ .product {
+     margin-top: 20px;
      border: 1px solid #ddd;
      padding: 10px;
-     text-align: center;
+     display: inline-block;
  }
  
- .product-card img {
-     width: 100%;
-     height: auto;
+ .product img {
+     width: 150px;
+     height: 200px;
  }
  
- button {
-     padding: 10px;
-     background-color: blue;
-     color: white;
-     border: none;
-     cursor: pointer;
- }
- 
- button:hover {
-     background-color: darkblue;
- }
- 
- #cart {
-     margin-top: 40px;
+ .product select {
+     margin: 5px 0;
  }
  

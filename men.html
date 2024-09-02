@@ -3,33 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Men's Collection - 999 E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Men's Collection</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <!-- ... same as index.html navbar ... -->
-    </nav>
+    <div class="navbar sticky">
+        <div class="nav-item">999</div>
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="men.html">Men</a></div>
+        <div class="nav-item"><a href="women.html">Women</a></div>
+        <div class="nav-item"><a href="cart.html">Cart</a></div>
+        <div class="nav-item"><a href="login.html">Login / Signup</a></div>
+    </div>
 
-    <!-- Men's Collection -->
-    <section class="section">
+    <div class="content">
         <h2>Men's Collection</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/A1.jpg" alt="A1 Series">
-                <h3>Series A1</h3>
-                <p>Select any 3 items for 999 INR</p>
-                <button onclick="addToCart('A1')">View Collection</button>
-            </div>
-            <div class="product-card">
-                <img src="images/A2.jpg" alt="A2 Series">
-                <h3>Series A2</h3>
-                <p>Select any 3 items for 999 INR</p>
-                <button onclick="addToCart('A2')">View Collection</button>
-            </div>
-            <!-- Add more series as needed -->
+        <div class="series">
+            <h3><a href="a1.html">A1 - Shirts</a></h3>
+            <h3><a href="a2.html">A2 - Pants</a></h3>
         </div>
-    </section>
+    </div>
 </body>
 </html>

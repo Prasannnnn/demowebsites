@@ -4,39 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>999 E-Commerce Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">999</a>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="men.html">Men</a></li>
-                <li><a href="women.html">Women</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-            <div class="navbar-auth">
-                <a href="#">Login / Signup</a>
+    <div class="navbar sticky">
+        <div class="nav-item">999</div>
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="men.html">Men</a></div>
+        <div class="nav-item"><a href="women.html">Women</a></div>
+        <div class="nav-item"><a href="cart.html">Cart</a></div>
+        <div class="nav-item"><a href="login.html">Login / Signup</a></div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to 999 E-Commerce Website</h1>
+        <p>Welcome to 999 new trends of clothing store. In here, there is a set of series of collections A and B. In each series, you order any 3 shirts or pants, and it costs 999. Any set of 3 items you buy in the series is only 999, plus a delivery fee of 50.</p>
+
+        <div class="categories">
+            <div class="category">
+                <a href="men.html"><img src="images/men.png" alt="Men"></a>
+                <p>Men</p>
+            </div>
+            <div class="category">
+                <a href="women.html"><img src="images/women.png" alt="Women"></a>
+                <p>Women</p>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to 999 E-Commerce</h1>
-        <p>Choose any 3 items from a series for just 999 INR! Delivery fee is 50 INR.</p>
-        <div class="hero-images">
-            <a href="men.html">
-                <img src="images/men1.jpg" alt="Men's Collection">
-                <p>Men</p>
-            </a>
-            <a href="women.html">
-                <img src="images/women1.jpg" alt="Women's Collection">
-                <p>Women</p>
-            </a>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
