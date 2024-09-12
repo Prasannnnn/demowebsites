@@ -68,26 +68,22 @@
     <div id="combo1" class="combo-details" style="display: none;">
       <h3>Combo 1 Details - ₹999</h3>
       <div class="combo-items">
-        <div class="item-category">
-          <h5>Shirts</h5>
-          <img src="https://via.placeholder.com/100" alt="Shirt 1" onclick="selectItem(this, 'Shirt')">
-          <img src="https://via.placeholder.com/100" alt="Shirt 2" onclick="selectItem(this, 'Shirt')">
-        </div>
-        <div class="item-category">
-          <h5>Pants</h5>
-          <img src="https://via.placeholder.com/100" alt="Pant 1" onclick="selectItem(this, 'Pant')">
-          <img src="https://via.placeholder.com/100" alt="Pant 2" onclick="selectItem(this, 'Pant')">
-        </div>
-        <div class="item-category">
-          <h5>Lowers</h5>
-          <img src="https://via.placeholder.com/100" alt="Lower 1" onclick="selectItem(this, 'Lower')">
-          <img src="https://via.placeholder.com/100" alt="Lower 2" onclick="selectItem(this, 'Lower')">
-        </div>
-        <div class="item-category">
-          <h5>T-Shirts</h5>
-          <img src="https://via.placeholder.com/100" alt="T-Shirt 1" onclick="selectItem(this, 'T-Shirt')">
-          <img src="https://via.placeholder.com/100" alt="T-Shirt 2" onclick="selectItem(this, 'T-Shirt')">
-        </div>
+          <div class="item-category" data-category="Shirt">
+               <img src="shirt1.jpg" data-name="Shirt1" onclick="selectItem(this, 'Shirt')">
+               <img src="shirt2.jpg" data-name="Shirt2" onclick="selectItem(this, 'Shirt')">
+             </div>
+             <div class="item-category" data-category="Pant">
+               <img src="pant1.jpg" data-name="Pant1" onclick="selectItem(this, 'Pant')">
+               <img src="pant2.jpg" data-name="Pant2" onclick="selectItem(this, 'Pant')">
+             </div>
+             <div class="item-category" data-category="Lower">
+               <img src="lower1.jpg" data-name="Lower1" onclick="selectItem(this, 'Lower')">
+               <img src="lower2.jpg" data-name="Lower2" onclick="selectItem(this, 'Lower')">
+             </div>
+             <div class="item-category" data-category="T-Shirt">
+               <img src="tshirt1.jpg" data-name="T-Shirt1" onclick="selectItem(this, 'T-Shirt')">
+               <img src="tshirt2.jpg" data-name="T-Shirt2" onclick="selectItem(this, 'T-Shirt')">
+             </div>             
       </div>
       <button onclick="addToCart('Combo 1')">Add to Cart</button>
     </div>

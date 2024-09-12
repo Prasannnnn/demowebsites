@@ -21,25 +21,33 @@ function showSection(section) {
    
    function selectItem(item, category) {
      // Deselect previous selection in the same category
-     document.querySelectorAll(`.item-category img.selected`).forEach(img => img.classList.remove('selected'));
+     document.querySelectorAll(`.item-category[data-category="${category}"] img.selected`).forEach(img => img.classList.remove('selected'));
      
      // Select the clicked item
      item.classList.add('selected');
-     selectedItems[category] = item;
+     selectedItems[category] = item.dataset.name;
+   
+     // Check if all categories have an item selected
+     if (Object.values(selectedItems).every(item => item)) {
+       addToCart();
+     }
    }
    
    // Handle adding combo to cart
    let cart = [];
-   function addToCart(combo) {
+   function addToCart() {
      if (Object.values(selectedItems).every(item => item)) {
        // Add combo to cart
-       cart.push({ combo: combo, price: 999 });
-       
+       cart.push({ 
+         items: { ...selectedItems }, 
+         price: 999 
+       });
+   
        // Clear selected items
        selectedItems = { 'Shirt': null, 'Pant': null, 'Lower': null, 'T-Shirt': null };
        document.querySelectorAll('.item-category img.selected').forEach(img => img.classList.remove('selected'));
    
-       alert(`${combo} added to cart!`);
+       alert('Combo added to cart!');
        updateCart();
      } else {
        alert('Please select one item from each category.');
@@ -51,8 +59,18 @@ function showSection(section) {
      cartItemsDiv.innerHTML = '';
      let totalAmount = 0;
      
-     cart.forEach(item => {
-       cartItemsDiv.innerHTML += `<p>${item.combo} - ₹999</p>`;
+     cart.forEach((item, index) => {
+       const { items } = item;
+       cartItemsDiv.innerHTML += `
+         <div class="cart-item">
+           <p><strong>Combo ${index + 1}</strong></p>
+           <p>Shirt: ${items['Shirt']}</p>
+           <p>Pant: ${items['Pant']}</p>
+           <p>Lower: ${items['Lower']}</p>
+           <p>T-Shirt: ${items['T-Shirt']}</p>
+           <p>Price: ₹999</p>
+         </div>
+       `;
        totalAmount += item.price;
      });
      
