@@ -3,106 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>999 Trends - E-commerce</title>
+  <title>999 Trends - Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Sticky Navigation Bar -->
-  <nav class="navbar">
-    <a href="#home" onclick="showSection('home')">Home</a>
-    <a href="#collections" onclick="showSection('collections')">Collections</a>
-    <a href="#cart" onclick="showSection('cart')">Add to Cart</a>
-  </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <h1>Welcome to 999 Trends</h1>
-    <p>Your one-stop shop for fashionable combos!</p>
-    <div class="quote-section">
-      <blockquote>“Style is a way to say who you are without having to speak.”</blockquote>
-      <blockquote>“Dressing well is a form of good manners.”</blockquote>
-    </div>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="cart.html">Add to Cart</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+
+  <!-- Section for Quotes -->
+  <section class="quote-section">
+    <h1>Welcome to 999 Trends!</h1>
+    <blockquote>Dress like you're already famous.</blockquote>
+    <blockquote>Fashion is the armor to survive everyday life.</blockquote>
   </section>
 
-  <!-- Collections Section -->
-  <section id="collections" class="section" style="display: none;">
-    <h2>Collections</h2>
-    <div class="tabs">
-      <button class="tab-button" onclick="showCollection('men-combos')">Men</button>
-      <button class="tab-button" onclick="showCollection('women-combos')">Women</button>
-    </div>
-
-    <!-- Men Combo List Page -->
-    <div id="men-combos" class="collection-section" style="display: none;">
-      <h3>Men's Combos - ₹999 each</h3>
-      <div class="combo-list">
-        <div class="combo-item" onclick="showComboDetails('combo1')">
-          <img src="https://via.placeholder.com/150" alt="Combo 1">
-          <h4>Combo 1</h4>
-        </div>
-        <div class="combo-item" onclick="showComboDetails('combo2')">
-          <img src="https://via.placeholder.com/150" alt="Combo 2">
-          <h4>Combo 2</h4>
-        </div>
-        <!-- Add more combo items similarly -->
-      </div>
-    </div>
-
-    <!-- Women Combo List Page -->
-    <div id="women-combos" class="collection-section" style="display: none;">
-      <h3>Women's Combos - ₹999 each</h3>
-      <div class="combo-list">
-        <div class="combo-item" onclick="showComboDetails('combo3')">
-          <img src="https://via.placeholder.com/150" alt="Combo 3">
-          <h4>Combo 3</h4>
-        </div>
-        <div class="combo-item" onclick="showComboDetails('combo4')">
-          <img src="https://via.placeholder.com/150" alt="Combo 4">
-          <h4>Combo 4</h4>
-        </div>
-        <!-- Add more combo items similarly -->
-      </div>
-    </div>
-
-    <!-- Combo 1 Details Page -->
-    <div id="combo1" class="combo-details" style="display: none;">
-      <h3>Combo 1 Details - ₹999</h3>
-      <div class="combo-items">
-          <div class="item-category" data-category="Shirt">
-               <h5>Shirt</h5>
-               <img src="shirt1.jpg" data-name="Shirt1" onclick="selectItem(this, 'Shirt')">
-               <img src="shirt2.jpg" data-name="Shirt2" onclick="selectItem(this, 'Shirt')">
-             </div>
-             <h5>Pant</h5>
-             <div class="item-category" data-category="Pant">
-               <img src="pant1.jpg" data-name="Pant1" onclick="selectItem(this, 'Pant')">
-               <img src="pant2.jpg" data-name="Pant2" onclick="selectItem(this, 'Pant')">
-             </div>
-             <h5>Lower</h5>
-             <div class="item-category" data-category="Lower">
-               <img src="lower1.jpg" data-name="Lower1" onclick="selectItem(this, 'Lower')">
-               <img src="lower2.jpg" data-name="Lower2" onclick="selectItem(this, 'Lower')">
-             </div>
-             <h5>T-Shirt</h5>
-             <div class="item-category" data-category="T-Shirt">
-               <img src="tshirt1.jpg" data-name="T-Shirt1" onclick="selectItem(this, 'T-Shirt')">
-               <img src="tshirt2.jpg" data-name="T-Shirt2" onclick="selectItem(this, 'T-Shirt')">
-             </div>             
-      </div>
-      <button onclick="addToCart('Combo 1')">Add to Cart</button>
-    </div>
-
-    <!-- Add similar detailed pages for other combos -->
-
-  </section>
-
-  <!-- Cart Section -->
-  <section id="cart" class="section" style="display: none;">
-    <h2>Your Cart</h2>
-    <div id="cart-items"></div>
-    <p id="total-amount"></p>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
