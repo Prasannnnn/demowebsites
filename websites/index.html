@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>999 Trends - Home</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>999 Trends - Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>999 Trends</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('collections')">Collections</a></li>
+                <li><a href="#" onclick="showSection('cart')">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="cart.html">Add to Cart</a>
-    <a href="login.html">Login</a>
-    <a href="signup.html">Sign Up</a>
-  </div>
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h2>Welcome to 999 Trends</h2>
+        <p>Dress in style with the latest trends! Every combo just ₹999. Choose your favorite combos from the collections below!</p>
+    </section>
 
-  <!-- Section for Quotes -->
-  <section class="quote-section">
-    <h1>Welcome to 999 Trends!</h1>
-    <blockquote>Dress like you're already famous.</blockquote>
-    <blockquote>Fashion is the armor to survive everyday life.</blockquote>
-  </section>
+    <!-- Collections Section -->
+    <section id="collections" class="section" style="display:none;">
+        <h2>Collections</h2>
+        <div class="collections-container">
+            <div class="collection" onclick="showCollection('men')">
+                <img src="C:\Users\Dell\projects\999\demowebsites\images\men-collection.png" alt="Men's Collection">
+                <p>Men's Collection</p>
+            </div>
+            <div class="collection" onclick="showCollection('women')">
+                <img src="C:\Users\Dell\projects\999\demowebsites\images\men-collection.png" alt="Women's Collection">
+                <p>Women's Collection</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Men Collection Section -->
+    <section id="men" class="collection-section" style="display:none;">
+        <h2>Men's Combos</h2>
+        <div class="combo-container">
+            <div class="combo" onclick="showComboDetails('combo1')">
+                <img src="images/combo1.jpg" alt="Combo 1">
+                <p>Combo 1</p>
+            </div>
+            <!-- Repeat for other combos -->
+        </div>
+    </section>
+
+    <!-- Combo 1 Details Section -->
+    <section id="combo1" class="combo-details" style="display:none;">
+        <h2>Combo 1 - ₹999</h2>
+        <p>Select one item from each category</p>
+        <div class="item-category" data-category="Shirt">
+            <h3>Shirts</h3>
+            <img src="images/shirt1.jpg" data-name="Shirt 1" alt="Shirt 1" onclick="selectItem(this, 'Shirt')">
+            <img src="images/shirt2.jpg" data-name="Shirt 2" alt="Shirt 2" onclick="selectItem(this, 'Shirt')">
+        </div>
+        <div class="item-category" data-category="Pant">
+            <h3>Pants</h3>
+            <img src="images/pant1.jpg" data-name="Pant 1" alt="Pant 1" onclick="selectItem(this, 'Pant')">
+            <img src="images/pant2.jpg" data-name="Pant 2" alt="Pant 2" onclick="selectItem(this, 'Pant')">
+        </div>
+        <div class="item-category" data-category="Lower">
+            <h3>Lowers</h3>
+            <img src="images/lower1.jpg" data-name="Lower 1" alt="Lower 1" onclick="selectItem(this, 'Lower')">
+            <img src="images/lower2.jpg" data-name="Lower 2" alt="Lower 2" onclick="selectItem(this, 'Lower')">
+        </div>
+        <div class="item-category" data-category="T-Shirt">
+            <h3>T-Shirts</h3>
+            <img src="images/tshirt1.jpg" data-name="T-Shirt 1" alt="T-Shirt 1" onclick="selectItem(this, 'T-Shirt')">
+            <img src="images/tshirt2.jpg" data-name="T-Shirt 2" alt="T-Shirt 2" onclick="selectItem(this, 'T-Shirt')">
+        </div>
+        <button id="addToCartButton" onclick="addToCart()">Add to Cart</button>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section" style="display:none;">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-amount"></p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
